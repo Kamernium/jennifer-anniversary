@@ -1,0 +1,227 @@
+[gd_scene load_steps=28 format=3 uid="uid://dbgrthp2o8qev"]
+
+[ext_resource type="Texture2D" uid="uid://d08c2d54133dr" path="res://Sprites/Meowland assets/azul.jpg" id="1_dbclc"]
+[ext_resource type="Texture2D" uid="uid://0rep5qg5p8a4" path="res://Sprites/Meowland assets/cesped.jpg" id="2_1hsmd"]
+[ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="3_52vwh"]
+[ext_resource type="Script" path="res://Scripts/gato_1.gd" id="4_fldmh"]
+[ext_resource type="Texture2D" uid="uid://c561y2jbqiksc" path="res://Sprites/Meowland assets/gato_transparente.png" id="4_ue557"]
+[ext_resource type="Script" path="res://Scripts/gato_2.gd" id="5_l3idy"]
+[ext_resource type="Texture2D" uid="uid://cncx35qhbwdys" path="res://Sprites/Meowland assets/gato_serio.png" id="6_boqi0"]
+[ext_resource type="Texture2D" uid="uid://cx8e0uh4qhg3e" path="res://Sprites/Meowland assets/gato_bailarín.png" id="7_1nxrm"]
+[ext_resource type="Script" path="res://Scripts/gato_3.gd" id="7_k0a02"]
+[ext_resource type="Script" path="res://Scripts/gato_4.gd" id="9_y3d12"]
+[ext_resource type="Texture2D" uid="uid://0232r6alncur" path="res://Sprites/Meowland assets/gato_negro.png" id="10_82u6c"]
+[ext_resource type="Texture2D" uid="uid://dsbfqei66q3ql" path="res://Sprites/Meowland assets/gato_de_pie.png" id="11_7hqyx"]
+[ext_resource type="Script" path="res://Scripts/gato_pregunton.gd" id="11_ks3rd"]
+[ext_resource type="Script" path="res://Scripts/gato_mago.gd" id="13_wim1k"]
+[ext_resource type="Texture2D" uid="uid://blb1fxakcm7eb" path="res://Sprites/Meowland assets/gato_mago.png" id="14_qoedd"]
+[ext_resource type="Script" path="res://Scripts/puerta_meow.gd" id="15_0d4uc"]
+[ext_resource type="Texture2D" uid="uid://g0d7ecp12yps" path="res://Sprites/puerta.png" id="15_p2trq"]
+[ext_resource type="AudioStream" uid="uid://ck7f04ylgjnq7" path="res://Sonidos/miaumiaumiau _song.mp3" id="18_l626y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isxqi"]
+size = Vector2(18788, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g8oo"]
+size = Vector2(307.5, 1764)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lm2im"]
+radius = 51.4781
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m0s6n"]
+radius = 103.0
+height = 234.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_djjb2"]
+radius = 144.281
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fcwni"]
+radius = 171.572
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvn32"]
+radius = 134.807
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3p7uj"]
+radius = 247.13
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxy1t"]
+size = Vector2(54, 139.25)
+
+[node name="Meowland" type="Node2D"]
+
+[node name="CieloAzul" type="Sprite2D" parent="."]
+position = Vector2(8150.5, 73.6521)
+scale = Vector2(86.7867, 6.49469)
+texture = ExtResource("1_dbclc")
+metadata/_edit_lock_ = true
+
+[node name="Cesped" type="StaticBody2D" parent="."]
+position = Vector2(777, 646)
+
+[node name="Cesped_spr" type="Sprite2D" parent="Cesped"]
+position = Vector2(7374.5, 178)
+scale = Vector2(13.0367, 0.487512)
+texture = ExtResource("2_1hsmd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cesped"]
+position = Vector2(7747, 0)
+shape = SubResource("RectangleShape2D_isxqi")
+metadata/_edit_lock_ = true
+
+[node name="Barrera1" type="StaticBody2D" parent="."]
+position = Vector2(-1028, 440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrera1"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_7g8oo")
+metadata/_edit_lock_ = true
+
+[node name="Barrera2" type="StaticBody2D" parent="."]
+position = Vector2(17288, 531)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrera2"]
+position = Vector2(3, -1)
+shape = SubResource("RectangleShape2D_7g8oo")
+metadata/_edit_lock_ = true
+
+[node name="Gato1" type="Area2D" parent="."]
+position = Vector2(6, 570)
+script = ExtResource("4_fldmh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gato1"]
+position = Vector2(0, -1)
+scale = Vector2(0.405, 0.345)
+texture = ExtResource("4_ue557")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gato1"]
+position = Vector2(6, -8)
+shape = SubResource("CircleShape2D_lm2im")
+metadata/_edit_lock_ = true
+
+[node name="Gato2" type="Area2D" parent="."]
+position = Vector2(1154, 555)
+script = ExtResource("5_l3idy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gato2"]
+position = Vector2(0.999998, -2)
+scale = Vector2(0.690476, 0.700669)
+texture = ExtResource("6_boqi0")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gato2"]
+position = Vector2(5, -22)
+shape = SubResource("CapsuleShape2D_m0s6n")
+
+[node name="Gato3" type="Area2D" parent="."]
+position = Vector2(3193, 492)
+script = ExtResource("7_k0a02")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gato3"]
+position = Vector2(0, -2)
+texture = ExtResource("7_1nxrm")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gato3"]
+shape = SubResource("CircleShape2D_djjb2")
+metadata/_edit_lock_ = true
+
+[node name="Gato4" type="Area2D" parent="."]
+position = Vector2(6274, 501)
+script = ExtResource("9_y3d12")
+
+[node name="Sprite2D" type="Sprite2D" parent="Gato4"]
+texture = ExtResource("10_82u6c")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gato4"]
+shape = SubResource("CircleShape2D_fcwni")
+metadata/_edit_lock_ = true
+
+[node name="GatoPregunton" type="Area2D" parent="."]
+position = Vector2(10531, 530)
+script = ExtResource("11_ks3rd")
+
+[node name="Sprite2D" type="Sprite2D" parent="GatoPregunton"]
+position = Vector2(3, -1)
+scale = Vector2(0.391667, 0.461111)
+texture = ExtResource("11_7hqyx")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GatoPregunton"]
+position = Vector2(2, 1)
+shape = SubResource("CircleShape2D_yvn32")
+metadata/_edit_lock_ = true
+
+[node name="GatoMago" type="Area2D" parent="."]
+position = Vector2(13567, 490)
+script = ExtResource("13_wim1k")
+
+[node name="Sprite2D" type="Sprite2D" parent="GatoMago"]
+position = Vector2(3, 3)
+scale = Vector2(0.785141, 0.708502)
+texture = ExtResource("14_qoedd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GatoMago"]
+position = Vector2(-40, -4)
+shape = SubResource("CircleShape2D_3p7uj")
+metadata/_edit_lock_ = true
+
+[node name="PuertaMeow" type="Area2D" parent="."]
+position = Vector2(13976, 527)
+script = ExtResource("15_0d4uc")
+
+[node name="Sprite2D" type="Sprite2D" parent="PuertaMeow"]
+position = Vector2(1.99995, -2.00002)
+scale = Vector2(0.183125, 0.19875)
+texture = ExtResource("15_p2trq")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaMeow"]
+position = Vector2(2, 0.625)
+shape = SubResource("RectangleShape2D_fxy1t")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_52vwh")]
+position = Vector2(-542, 539)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_l626y")
+autoplay = true
+parameters/looping = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = -865.0
+offset_top = 360.0
+offset_right = -688.0
+offset_bottom = 430.0
+text = "Meowland"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -859.0
+offset_top = 419.0
+offset_right = -677.0
+offset_bottom = 442.0
+theme_override_font_sizes/font_size = 11
+text = "El mundo de los gatos parlantes :3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Gato1" to="Gato1" method="_on_area_entered"]
+[connection signal="area_exited" from="Gato1" to="Gato1" method="_on_area_exited"]
+[connection signal="area_entered" from="Gato2" to="Gato2" method="_on_area_entered"]
+[connection signal="area_exited" from="Gato2" to="Gato2" method="_on_area_exited"]
+[connection signal="area_entered" from="Gato3" to="Gato3" method="_on_area_entered"]
+[connection signal="area_exited" from="Gato3" to="Gato3" method="_on_area_exited"]
+[connection signal="area_entered" from="Gato4" to="Gato4" method="_on_area_entered"]
+[connection signal="area_exited" from="Gato4" to="Gato4" method="_on_area_exited"]
+[connection signal="area_entered" from="GatoPregunton" to="GatoPregunton" method="_on_area_entered"]
+[connection signal="area_exited" from="GatoPregunton" to="GatoPregunton" method="_on_area_exited"]
+[connection signal="area_entered" from="GatoMago" to="GatoMago" method="_on_area_entered"]
+[connection signal="area_exited" from="GatoMago" to="GatoMago" method="_on_area_exited"]
+[connection signal="area_entered" from="PuertaMeow" to="PuertaMeow" method="_on_area_entered"]
+[connection signal="area_exited" from="PuertaMeow" to="PuertaMeow" method="_on_area_exited"]

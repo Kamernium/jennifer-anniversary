@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://bi1mdxfbyrpmx"]
+
+[ext_resource type="Texture2D" uid="uid://dlbys8ho5ndq1" path="res://icon.svg" id="1_nh4e6"]
+[ext_resource type="Script" path="res://Scripts/test_npc.gd" id="2_6lctl"]
+[ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="2_7n8js"]
+[ext_resource type="Texture2D" uid="uid://c81k3o1don31a" path="res://Sprites/Testing/Cara(Placeholder).png" id="3_rgrwr"]
+[ext_resource type="Script" path="res://Scripts/npc_2.gd" id="4_tfyta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1mpa"]
+size = Vector2(4213, 151)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yts3w"]
+radius = 186.531
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avx15"]
+radius = 90.2718
+
+[node name="Testzone" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(346, 566)
+
+[node name="Icon" type="Sprite2D" parent="Floor"]
+scale = Vector2(32.8984, 1.35156)
+texture = ExtResource("1_nh4e6")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-7.5, 6.5)
+shape = SubResource("RectangleShape2D_h1mpa")
+
+[node name="TestNPC" type="Area2D" parent="."]
+position = Vector2(1806, 311)
+script = ExtResource("2_6lctl")
+
+[node name="Sprite2D" type="Sprite2D" parent="TestNPC"]
+position = Vector2(1, 5)
+scale = Vector2(0.747222, 0.691667)
+texture = ExtResource("3_rgrwr")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestNPC"]
+shape = SubResource("CircleShape2D_yts3w")
+metadata/_edit_lock_ = true
+
+[node name="NPC2" type="Area2D" parent="."]
+position = Vector2(-1636, 414)
+script = ExtResource("4_tfyta")
+
+[node name="Sprite2D" type="Sprite2D" parent="NPC2"]
+position = Vector2(-1.52588e-05, 1.54972e-05)
+scale = Vector2(0.252778, 0.261111)
+texture = ExtResource("3_rgrwr")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC2"]
+shape = SubResource("CircleShape2D_avx15")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_7n8js")]
+position = Vector2(67, 289)
+
+[connection signal="area_entered" from="TestNPC" to="TestNPC" method="_on_area_entered"]
+[connection signal="area_exited" from="TestNPC" to="TestNPC" method="_on_area_exited"]
+[connection signal="area_entered" from="NPC2" to="TestNPC" method="_on_npc_2_area_entered"]
+[connection signal="area_entered" from="NPC2" to="NPC2" method="_on_area_entered"]
+[connection signal="area_exited" from="NPC2" to="NPC2" method="_on_area_exited"]

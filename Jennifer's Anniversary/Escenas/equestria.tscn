@@ -1,0 +1,225 @@
+[gd_scene load_steps=31 format=3 uid="uid://cg2i1u1a200eb"]
+
+[ext_resource type="Texture2D" uid="uid://xkihjodh3ubi" path="res://Sprites/Equestria assets/Equestria.webp" id="1_ytl2k"]
+[ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="2_4pj5g"]
+[ext_resource type="Texture2D" uid="uid://cxglmr4avepn6" path="res://Sprites/Equestria assets/Marron.png" id="3_y3h56"]
+[ext_resource type="Texture2D" uid="uid://csr7v0bddsqnd" path="res://Sprites/Equestria assets/Twilight_Sparkle.webp" id="4_118de"]
+[ext_resource type="Script" path="res://Scripts/twilight.gd" id="4_pjx0u"]
+[ext_resource type="Texture2D" uid="uid://c4oqfumvj20vx" path="res://Sprites/Equestria assets/Applejack.webp" id="5_afegi"]
+[ext_resource type="Script" path="res://Scripts/applejack.gd" id="5_ktewa"]
+[ext_resource type="Texture2D" uid="uid://cks4c84vk61og" path="res://Sprites/Equestria assets/Fluttershy.webp" id="7_xaisl"]
+[ext_resource type="Script" path="res://Scripts/fluttershy.gd" id="7_yk11j"]
+[ext_resource type="Texture2D" uid="uid://cikkhtr34nbu2" path="res://Sprites/Equestria assets/Rarity.webp" id="9_fw7yk"]
+[ext_resource type="Script" path="res://Scripts/rarity.gd" id="9_qak3j"]
+[ext_resource type="Script" path="res://Scripts/rainbow.gd" id="9_xuwj1"]
+[ext_resource type="Texture2D" uid="uid://c6wl5qbf6xrrv" path="res://Sprites/Equestria assets/RainbowDashakemiedo.png" id="10_86qpd"]
+[ext_resource type="Script" path="res://Scripts/pinkie.gd" id="11_m6l8f"]
+[ext_resource type="Texture2D" uid="uid://dwqeecxwg6xvo" path="res://Sprites/Equestria assets/pinkipai_smile.png" id="12_iqmoi"]
+[ext_resource type="Texture2D" uid="uid://hv2aj51pbrk4" path="res://Sprites/Equestria assets/Spike_asustado.png" id="13_78hj1"]
+[ext_resource type="Script" path="res://Scripts/spike.gd" id="13_xst21"]
+[ext_resource type="Texture2D" uid="uid://g0d7ecp12yps" path="res://Sprites/puerta.png" id="16_077oi"]
+[ext_resource type="Script" path="res://Scripts/puerta_pony.gd" id="16_ouslc"]
+[ext_resource type="AudioStream" uid="uid://r34mqa8xsmxj" path="res://Sonidos/mylittelponymylittleponyyyy.mp3" id="20_fwu62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bci2o"]
+size = Vector2(3612, 77.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fw4ak"]
+size = Vector2(145, 1108.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hmq0r"]
+radius = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w42n2"]
+radius = 47.1699
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tpmed"]
+radius = 59.9333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e50nd"]
+radius = 54.1202
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2guh1"]
+radius = 64.0703
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_usgwe"]
+radius = 75.6637
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l25ua"]
+radius = 41.0488
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j615t"]
+size = Vector2(36, 108)
+
+[node name="Equestria" type="Node2D"]
+
+[node name="Marron" type="Sprite2D" parent="."]
+position = Vector2(1119.69, 813)
+scale = Vector2(19.1494, 1)
+texture = ExtResource("3_y3h56")
+
+[node name="Equestria" type="Sprite2D" parent="."]
+position = Vector2(1128, 342)
+scale = Vector2(3.3625, 1.075)
+texture = ExtResource("1_ytl2k")
+
+[node name="Suelo" type="StaticBody2D" parent="."]
+position = Vector2(606, 690)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
+position = Vector2(552, -1)
+shape = SubResource("RectangleShape2D_bci2o")
+metadata/_edit_lock_ = true
+
+[node name="Pared1" type="StaticBody2D" parent="."]
+position = Vector2(-574, 371)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared1"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_fw4ak")
+metadata/_edit_lock_ = true
+
+[node name="Pared2" type="StaticBody2D" parent="."]
+position = Vector2(3039, 365)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared2"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_fw4ak")
+metadata/_edit_lock_ = true
+
+[node name="Twilight" type="Area2D" parent="."]
+position = Vector2(67, 618)
+script = ExtResource("4_pjx0u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Twilight"]
+position = Vector2(-1, 1.52588e-05)
+scale = Vector2(0.0234155, 0.0234818)
+texture = ExtResource("4_118de")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Twilight"]
+shape = SubResource("CircleShape2D_hmq0r")
+metadata/_edit_lock_ = true
+
+[node name="Applejack" type="Area2D" parent="."]
+position = Vector2(498, 618)
+script = ExtResource("5_ktewa")
+
+[node name="Sprite2D" type="Sprite2D" parent="Applejack"]
+position = Vector2(4.76837e-06, -1.99999)
+scale = Vector2(0.264583, 0.22786)
+texture = ExtResource("5_afegi")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Applejack"]
+shape = SubResource("CircleShape2D_w42n2")
+metadata/_edit_lock_ = true
+
+[node name="Fluttershy" type="Area2D" parent="."]
+position = Vector2(966, 585)
+script = ExtResource("7_yk11j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Fluttershy"]
+position = Vector2(-3, 2)
+scale = Vector2(0.0558333, 0.0500831)
+texture = ExtResource("7_xaisl")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fluttershy"]
+shape = SubResource("CircleShape2D_tpmed")
+metadata/_edit_lock_ = true
+
+[node name="Rarity" type="Area2D" parent="."]
+position = Vector2(1297, 614)
+script = ExtResource("9_qak3j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rarity"]
+position = Vector2(-3.99997, -7.62939e-06)
+scale = Vector2(0.0625001, 0.0541705)
+texture = ExtResource("9_fw7yk")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rarity"]
+shape = SubResource("CircleShape2D_e50nd")
+metadata/_edit_lock_ = true
+
+[node name="Rainbow" type="Area2D" parent="."]
+position = Vector2(1734, 621)
+script = ExtResource("9_xuwj1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Rainbow"]
+position = Vector2(2.25001, 0.250041)
+scale = Vector2(0.115698, 0.0818062)
+texture = ExtResource("10_86qpd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rainbow"]
+shape = SubResource("CircleShape2D_2guh1")
+metadata/_edit_lock_ = true
+
+[node name="Pinkie" type="Area2D" parent="."]
+position = Vector2(2034, 614)
+script = ExtResource("11_m6l8f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Pinkie"]
+position = Vector2(-7.62939e-06, -4.25001)
+scale = Vector2(0.0605468, 0.0428496)
+texture = ExtResource("12_iqmoi")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinkie"]
+shape = SubResource("CircleShape2D_usgwe")
+metadata/_edit_lock_ = true
+
+[node name="Spike" type="Area2D" parent="."]
+position = Vector2(2517, 632)
+script = ExtResource("13_xst21")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spike"]
+position = Vector2(-4.57764e-05, 0)
+scale = Vector2(0.0459301, 0.0385096)
+texture = ExtResource("13_78hj1")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spike"]
+shape = SubResource("CircleShape2D_l25ua")
+metadata/_edit_lock_ = true
+
+[node name="Puerta" type="Area2D" parent="."]
+position = Vector2(2749, 596)
+script = ExtResource("16_ouslc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Puerta"]
+position = Vector2(0, -1.00002)
+scale = Vector2(0.1125, 0.155)
+texture = ExtResource("16_077oi")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
+shape = SubResource("RectangleShape2D_j615t")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_4pj5g")]
+position = Vector2(-454, 583)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_fwu62")
+autoplay = true
+parameters/looping = true
+
+[connection signal="area_entered" from="Twilight" to="Twilight" method="_on_area_entered"]
+[connection signal="area_exited" from="Twilight" to="Twilight" method="_on_area_exited"]
+[connection signal="area_entered" from="Applejack" to="Applejack" method="_on_area_entered"]
+[connection signal="area_exited" from="Applejack" to="Applejack" method="_on_area_exited"]
+[connection signal="area_entered" from="Fluttershy" to="Fluttershy" method="_on_area_entered"]
+[connection signal="area_exited" from="Fluttershy" to="Fluttershy" method="_on_area_exited"]
+[connection signal="area_entered" from="Rarity" to="Rarity" method="_on_area_entered"]
+[connection signal="area_exited" from="Rarity" to="Rarity" method="_on_area_exited"]
+[connection signal="area_entered" from="Rainbow" to="Rainbow" method="_on_area_entered"]
+[connection signal="area_exited" from="Rainbow" to="Rainbow" method="_on_area_exited"]
+[connection signal="area_entered" from="Pinkie" to="Pinkie" method="_on_area_entered"]
+[connection signal="area_exited" from="Pinkie" to="Pinkie" method="_on_area_exited"]
+[connection signal="area_entered" from="Spike" to="Spike" method="_on_area_entered"]
+[connection signal="area_exited" from="Spike" to="Spike" method="_on_area_exited"]
+[connection signal="area_entered" from="Puerta" to="Puerta" method="_on_area_entered"]
+[connection signal="area_exited" from="Puerta" to="Puerta" method="_on_area_exited"]
