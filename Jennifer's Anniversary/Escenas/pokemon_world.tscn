@@ -1,0 +1,111 @@
+[gd_scene load_steps=14 format=3 uid="uid://bhfsr2hkk0wqn"]
+
+[ext_resource type="Texture2D" uid="uid://c88guac6nh78v" path="res://Sprites/Pokemon World assets/pueblo_paleta.png" id="1_i07ma"]
+[ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="2_cdmsq"]
+[ext_resource type="Script" path="res://Scripts/red.gd" id="3_kseh8"]
+[ext_resource type="Texture2D" uid="uid://dvxilnhgra5w" path="res://Sprites/Pokemon World assets/VaporeonAquerico.png" id="4_484i8"]
+[ext_resource type="Texture2D" uid="uid://ij35lem3dq1c" path="res://Sprites/Pokemon World assets/RedPokemon.webp" id="4_u1vbd"]
+[ext_resource type="Script" path="res://Scripts/vaporeon.gd" id="4_wgnf6"]
+[ext_resource type="Texture2D" uid="uid://g0d7ecp12yps" path="res://Sprites/puerta.png" id="6_4wbqc"]
+[ext_resource type="Script" path="res://Scripts/puerta_pokemon.gd" id="6_7cp8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t6ov"]
+size = Vector2(3612, 77.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eslhc"]
+size = Vector2(145, 1108.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8abl"]
+radius = 39.5168
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5bltm"]
+radius = 66.1891
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs1og"]
+size = Vector2(69, 164)
+
+[node name="PokemonWorld" type="Node2D"]
+
+[node name="PuebloPaleta" type="Sprite2D" parent="."]
+position = Vector2(608.5, 374)
+scale = Vector2(2.31333, 2.12571)
+texture = ExtResource("1_i07ma")
+metadata/_edit_lock_ = true
+
+[node name="Suelo" type="StaticBody2D" parent="."]
+position = Vector2(595, 649)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
+position = Vector2(552, -1)
+shape = SubResource("RectangleShape2D_5t6ov")
+metadata/_edit_lock_ = true
+
+[node name="Pared1" type="StaticBody2D" parent="."]
+position = Vector2(8, 369)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared1"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_eslhc")
+metadata/_edit_lock_ = true
+
+[node name="Pared2" type="StaticBody2D" parent="."]
+position = Vector2(1178, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared2"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_eslhc")
+metadata/_edit_lock_ = true
+
+[node name="Red" type="Area2D" parent="."]
+position = Vector2(476, 527)
+scale = Vector2(2.31333, 2.12571)
+script = ExtResource("3_kseh8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Red"]
+position = Vector2(-1.09822e-05, 3.8147e-06)
+scale = Vector2(0.0980675, 0.10283)
+texture = ExtResource("4_u1vbd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red"]
+shape = SubResource("CircleShape2D_s8abl")
+metadata/_edit_lock_ = true
+
+[node name="Vaporeon" type="Area2D" parent="."]
+position = Vector2(750, 538)
+script = ExtResource("4_wgnf6")
+
+[node name="VaporeonAquerico" type="Sprite2D" parent="Vaporeon"]
+position = Vector2(-7.62939e-06, 2.09808e-05)
+scale = Vector2(0.255263, 0.233158)
+texture = ExtResource("4_484i8")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vaporeon"]
+shape = SubResource("CircleShape2D_5bltm")
+metadata/_edit_lock_ = true
+
+[node name="Puerta" type="Area2D" parent="."]
+position = Vector2(1044, 526)
+script = ExtResource("6_7cp8e")
+
+[node name="Puerta2" type="Sprite2D" parent="Puerta"]
+position = Vector2(6.10352e-05, 0)
+scale = Vector2(0.214375, 0.24125)
+texture = ExtResource("6_4wbqc")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_bs1og")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_cdmsq")]
+position = Vector2(157, 522)
+
+[connection signal="area_entered" from="Red" to="Red" method="_on_area_entered"]
+[connection signal="area_exited" from="Red" to="Red" method="_on_area_exited"]
+[connection signal="area_entered" from="Vaporeon" to="Vaporeon" method="_on_area_entered"]
+[connection signal="area_exited" from="Vaporeon" to="Vaporeon" method="_on_area_exited"]
+[connection signal="area_entered" from="Puerta" to="Puerta" method="_on_area_entered"]
+[connection signal="area_exited" from="Puerta" to="Puerta" method="_on_area_exited"]
