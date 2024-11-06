@@ -85,7 +85,7 @@ shape = SubResource("CapsuleShape2D_dwug3")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.75, 1.75)
+zoom = Vector2(2, 2)
 
 [node name="Interaction" type="Area2D" parent="."]
 position = Vector2(-11, 0)

@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3 uid="uid://b2kj3pvqgg45x"]
+
+[ext_resource type="Texture2D" uid="uid://ds073a3ugd4ef" path="res://Sprites/Impact assets/MejorFondoImpactjpg.jpg" id="1_sm717"]
+[ext_resource type="Script" path="res://Scripts/paimon.gd" id="2_kxwga"]
+[ext_resource type="Texture2D" uid="uid://b3n10btqaqfd7" path="res://Sprites/Impact assets/Paimon.webp" id="2_xwy7h"]
+[ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="3_qr4rf"]
+[ext_resource type="Script" path="res://Scripts/puerta_impact.gd" id="5_vj2ra"]
+[ext_resource type="Texture2D" uid="uid://g0d7ecp12yps" path="res://Sprites/puerta.png" id="6_1olmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02r43"]
+size = Vector2(3612, 77.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jktaj"]
+size = Vector2(145, 1108.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wnbl4"]
+radius = 64.3817
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oa72w"]
+size = Vector2(340.827, 696)
+
+[node name="ImpactWorld" type="Node2D"]
+
+[node name="MejorFondoImpactjpg" type="Sprite2D" parent="."]
+position = Vector2(576, 342)
+scale = Vector2(0.955, 1.00444)
+texture = ExtResource("1_sm717")
+metadata/_edit_lock_ = true
+
+[node name="Suelo" type="StaticBody2D" parent="."]
+position = Vector2(596, 605)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
+position = Vector2(552, -1)
+shape = SubResource("RectangleShape2D_02r43")
+metadata/_edit_lock_ = true
+
+[node name="Pared1" type="StaticBody2D" parent="."]
+position = Vector2(193, 352)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared1"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_jktaj")
+metadata/_edit_lock_ = true
+
+[node name="Pared2" type="StaticBody2D" parent="."]
+position = Vector2(907, 343)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared2"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_jktaj")
+metadata/_edit_lock_ = true
+
+[node name="Paimon" type="Area2D" parent="."]
+position = Vector2(529, 488)
+script = ExtResource("2_kxwga")
+
+[node name="Paimon2" type="Sprite2D" parent="Paimon"]
+position = Vector2(1, 0)
+scale = Vector2(0.110778, 0.0926339)
+texture = ExtResource("2_xwy7h")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paimon"]
+shape = SubResource("CircleShape2D_wnbl4")
+metadata/_edit_lock_ = true
+
+[node name="Puerta" type="Area2D" parent="."]
+position = Vector2(790, 521)
+scale = Vector2(0.105625, 0.125)
+script = ExtResource("5_vj2ra")
+
+[node name="Puertaspr" type="Sprite2D" parent="Puerta"]
+scale = Vector2(1, 1)
+texture = ExtResource("6_1olmd")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta"]
+position = Vector2(0.00195313, 4)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_oa72w")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_qr4rf")]
+position = Vector2(331, 511)
+
+[connection signal="area_entered" from="Paimon" to="Paimon" method="_on_area_entered"]
+[connection signal="area_exited" from="Paimon" to="Paimon" method="_on_area_exited"]
+[connection signal="area_entered" from="Puerta" to="Puerta" method="_on_area_entered"]
+[connection signal="area_exited" from="Puerta" to="Puerta" method="_on_area_exited"]
