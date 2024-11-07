@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bhfsr2hkk0wqn"]
+[gd_scene load_steps=15 format=3 uid="uid://bhfsr2hkk0wqn"]
 
 [ext_resource type="Texture2D" uid="uid://c88guac6nh78v" path="res://Sprites/Pokemon World assets/pueblo_paleta.png" id="1_i07ma"]
 [ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="2_cdmsq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/vaporeon.gd" id="4_wgnf6"]
 [ext_resource type="Texture2D" uid="uid://g0d7ecp12yps" path="res://Sprites/puerta.png" id="6_4wbqc"]
 [ext_resource type="Script" path="res://Scripts/puerta_pokemon.gd" id="6_7cp8e"]
+[ext_resource type="AudioStream" uid="uid://cq7j5koafefh3" path="res://Sonidos/Pueblo_paleta_audio.mp3" id="9_sti54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t6ov"]
 size = Vector2(3612, 77.5)
@@ -102,6 +103,11 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_cdmsq")]
 position = Vector2(157, 522)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_sti54")
+autoplay = true
+parameters/looping = true
 
 [connection signal="area_entered" from="Red" to="Red" method="_on_area_entered"]
 [connection signal="area_exited" from="Red" to="Red" method="_on_area_exited"]
