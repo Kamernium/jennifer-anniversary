@@ -16,4 +16,4 @@ func _on_area_exited(area: Area2D) -> void:
 func _process(delta: float) -> void:
 	if can_enter == true:
 		if Input.is_action_just_pressed("Entrarle"):
-			get_tree().change_scene_to_file("res://Escenas/testzone.tscn")
+			get_tree().change_scene_to_file("res://Escenas/transición.tscn")

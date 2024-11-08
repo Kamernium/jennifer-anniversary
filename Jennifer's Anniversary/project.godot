@@ -17,12 +17,17 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+JumpToShadow="*res://Scripts/jump_to_shadow.gd"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"ShadowChar": "res://Dialogic characters/ShadowChar.dch",
+"TestDialogueCaracter": "res://Dialogic characters/TestDialogueCaracter.dch"
+}
 directories/dtl_directory={
 "Applejack": "res://Dialogic timelines/Applejack.dtl",
+"CharacterTest": "res://Dialogic timelines/CharacterTest.dtl",
 "Fluttershy": "res://Dialogic timelines/Fluttershy.dtl",
 "Gato 4": "res://Dialogic timelines/Gato 4.dtl",
 "Gato1": "res://Dialogic timelines/Gato1.dtl",
@@ -30,17 +35,42 @@ directories/dtl_directory={
 "Gato3": "res://Dialogic timelines/Gato3.dtl",
 "GatoMago": "res://Dialogic timelines/GatoMago.dtl",
 "GatoPregunton": "res://Dialogic timelines/GatoPregunton.dtl",
+"KatiguiDisculpa": "res://Dialogic timelines/KatiguiDisculpa.dtl",
 "Paimon": "res://Dialogic timelines/Paimon.dtl",
 "Pinkie": "res://Dialogic timelines/Pinkie.dtl",
 "Rainbow": "res://Dialogic timelines/Rainbow.dtl",
 "Rarity": "res://Dialogic timelines/Rarity.dtl",
 "Red": "res://Dialogic timelines/Red.dtl",
+"Shadow": "res://Dialogic timelines/Shadow.dtl",
 "Spike": "res://Dialogic timelines/Spike.dtl",
 "Test1": "res://Dialogic timelines/Test1.dtl",
 "Test2": "res://Dialogic timelines/Test2.dtl",
 "Twilight": "res://Dialogic timelines/Twilight.dtl",
 "Vaporeon": "res://Dialogic timelines/Vaporeon.dtl"
 }
+layout/style_list=[]
+layout/default_style="Default"
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+audio/max_channels=4.0
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+animations/join_default="Instant In"
+text/autopauses={}
 
 [display]
 

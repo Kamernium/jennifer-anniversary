@@ -1,0 +1,92 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "bailarín",
+"description": "",
+"display_name": "TestDialogueCaracter",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"": {
+"export_overrides": {
+"image": "\"res://Sprites/puerta.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Cara(Placeholder)": {
+"export_overrides": {
+"image": "\"res://Sprites/Testing/Cara(Placeholder).png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"bailarín": {
+"export_overrides": {
+"image": "\"res://Sprites/Meowland assets/gato_bailarín.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"de_pie": {
+"export_overrides": {
+"image": "\"res://Sprites/Meowland assets/gato_de_pie.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"mago": {
+"export_overrides": {
+"image": "\"res://Sprites/Meowland assets/gato_mago.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"negro": {
+"export_overrides": {
+"image": "\"res://Sprites/Meowland assets/gato_negro.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"serio": {
+"export_overrides": {
+"image": "\"res://Sprites/Meowland assets/gato_serio.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"transparente": {
+"export_overrides": {
+"image": "\"res://Sprites/Meowland assets/gato_transparente.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}
