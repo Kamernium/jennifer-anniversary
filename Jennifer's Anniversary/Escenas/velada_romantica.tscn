@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://mp2o84gcnldm"]
+
+[ext_resource type="Texture2D" uid="uid://obb23vxc7umy" path="res://Sprites/restaurante.jpg" id="1_avtih"]
+[ext_resource type="Script" path="res://Scripts/velada_romantica.gd" id="1_hb5x2"]
+[ext_resource type="AudioStream" uid="uid://d11hvjl6lxe1y" path="res://Sonidos/youtube_OaBi8i-6COM_audio.mp3" id="3_7jdgn"]
+
+[node name="VeladaRomantica" type="Node2D"]
+script = ExtResource("1_hb5x2")
+
+[node name="Restaurante" type="Sprite2D" parent="."]
+position = Vector2(575.5, 323.5)
+scale = Vector2(1.62394, 1.69372)
+texture = ExtResource("1_avtih")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7jdgn")
+autoplay = true
+parameters/looping = true
