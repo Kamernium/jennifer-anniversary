@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3moogkqxm6av"]
+
+[ext_resource type="Script" path="res://Scripts/just_monika.gd" id="1_816ua"]
+[ext_resource type="Texture2D" uid="uid://c3vkl1xidwo6n" path="res://Sprites/JustMonika/JustMonika.webp" id="2_f2vtg"]
+[ext_resource type="AudioStream" uid="uid://cawehkg8p588f" path="res://Sonidos/JustMonika.mp3" id="3_i180w"]
+
+[node name="JustMonika" type="Node2D"]
+script = ExtResource("1_816ua")
+
+[node name="JustMonika" type="Sprite2D" parent="."]
+position = Vector2(577.5, 326)
+scale = Vector2(1.151, 1.15098)
+texture = ExtResource("2_f2vtg")
+
+[node name="JustMonika2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(595, 308)
+stream = ExtResource("3_i180w")
+autoplay = true
+parameters/looping = true

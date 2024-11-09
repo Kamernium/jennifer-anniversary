@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnfi22se115ev"]
+
+[ext_resource type="Script" path="res://Scripts/interruption.gd" id="1_yilhs"]
+[ext_resource type="Texture2D" uid="uid://cf70ex8ya100q" path="res://Sprites/negro.png" id="2_mnnm2"]
+
+[node name="Interruption" type="Node2D"]
+script = ExtResource("1_yilhs")
+
+[node name="Negro" type="Sprite2D" parent="."]
+position = Vector2(510, 328)
+texture = ExtResource("2_mnnm2")

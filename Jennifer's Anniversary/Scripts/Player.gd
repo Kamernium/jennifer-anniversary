@@ -51,9 +51,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_interaction_area_entered(area: Area2D) -> void:
+func _on_interaction_area_entered(_area: Area2D) -> void:
 	can_interact = true
 
 
-func _on_interaction_area_exited(area: Area2D) -> void:
+func _on_interaction_area_exited(_area: Area2D) -> void:
 	can_interact = false

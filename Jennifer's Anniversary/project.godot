@@ -35,6 +35,7 @@ directories/dtl_directory={
 "Gato3": "res://Dialogic timelines/Gato3.dtl",
 "GatoMago": "res://Dialogic timelines/GatoMago.dtl",
 "GatoPregunton": "res://Dialogic timelines/GatoPregunton.dtl",
+"JustMonika": "res://Dialogic timelines/JustMonika.dtl",
 "KatiguiDisculpa": "res://Dialogic timelines/KatiguiDisculpa.dtl",
 "Paimon": "res://Dialogic timelines/Paimon.dtl",
 "Pinkie": "res://Dialogic timelines/Pinkie.dtl",
@@ -45,6 +46,7 @@ directories/dtl_directory={
 "Spike": "res://Dialogic timelines/Spike.dtl",
 "Test1": "res://Dialogic timelines/Test1.dtl",
 "Test2": "res://Dialogic timelines/Test2.dtl",
+"TransferToMonika": "res://Dialogic timelines/TransferToMonika.dtl",
 "Twilight": "res://Dialogic timelines/Twilight.dtl",
 "Vaporeon": "res://Dialogic timelines/Vaporeon.dtl"
 }
