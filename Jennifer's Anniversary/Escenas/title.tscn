@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://og4s2e423hrf"]
+
+[ext_resource type="Script" path="res://Scripts/title.gd" id="1_7vs0p"]
+[ext_resource type="Texture2D" uid="uid://b0ati1ajuxwuu" path="res://Sprites/gatitos.jpg" id="1_qhgpr"]
+[ext_resource type="FontFile" uid="uid://blc2yn3iljfxs" path="res://Sprites/Super Squad Italic.ttf" id="2_sa182"]
+[ext_resource type="AudioStream" uid="uid://bmkyqqs6of30n" path="res://Sonidos/Turi ip.mp3" id="3_826ql"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vs0p")
+
+[node name="Gatitos" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.822857, 0.653226)
+texture = ExtResource("1_qhgpr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 116.0
+offset_right = 1146.0
+offset_bottom = 316.0
+theme_override_fonts/font = ExtResource("2_sa182")
+theme_override_font_sizes/font_size = 45
+text = "Jennifer's Aniversary Adventures Collection "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 215.0
+offset_right = 1065.0
+offset_bottom = 415.0
+theme_override_fonts/font = ExtResource("2_sa182")
+theme_override_font_sizes/font_size = 45
+text = "EX+ Prime Director's Cut Edition"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 443.0
+offset_right = 634.0
+offset_bottom = 545.0
+text = "Jugar"
+
+[node name="TuriIp" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(479, 251)
+stream = ExtResource("3_826ql")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

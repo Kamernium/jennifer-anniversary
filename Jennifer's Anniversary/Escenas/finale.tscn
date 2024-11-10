@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://ci1ev6unylsde"]
+
+[ext_resource type="Texture2D" uid="uid://cxglmr4avepn6" path="res://Sprites/Equestria assets/Marron.png" id="1_8qx14"]
+[ext_resource type="Texture2D" uid="uid://cs43sxx35tf3e" path="res://Sprites/Finale assets/BirthdayCake.png" id="1_gc8re"]
+[ext_resource type="PackedScene" uid="uid://cdgfym0hipxxq" path="res://Escenas/player.tscn" id="2_44mt8"]
+[ext_resource type="AudioStream" uid="uid://cti70xc7gy2kk" path="res://Sonidos/BirthdaySong.wav" id="4_bg4f7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utho7"]
+size = Vector2(1650, 216)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4o2g"]
+size = Vector2(145, 1108.5)
+
+[node name="Finale" type="Node2D"]
+
+[node name="Marron" type="Sprite2D" parent="."]
+position = Vector2(296, 1291.5)
+scale = Vector2(15.2, 13.2133)
+texture = ExtResource("1_8qx14")
+
+[node name="BirthdayCake" type="Sprite2D" parent="."]
+position = Vector2(578, 1012)
+scale = Vector2(2.10545, 1.64087)
+texture = ExtResource("1_gc8re")
+metadata/_edit_lock_ = true
+
+[node name="Suelo" type="StaticBody2D" parent="."]
+position = Vector2(543, 704)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo"]
+shape = SubResource("RectangleShape2D_utho7")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_44mt8")]
+position = Vector2(292, 512)
+
+[node name="Pared1" type="StaticBody2D" parent="."]
+position = Vector2(115, 413)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared1"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_y4o2g")
+metadata/_edit_lock_ = true
+
+[node name="Pared2" type="StaticBody2D" parent="."]
+position = Vector2(1103, 451)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared2"]
+position = Vector2(-1, 7)
+shape = SubResource("RectangleShape2D_y4o2g")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 442.0
+offset_top = 352.0
+offset_right = 787.0
+offset_bottom = 493.0
+theme_override_font_sizes/font_size = 20
+text = "¡¡Feliz cumpleaños Jennifer!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BirthdaySong" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(487, 451)
+stream = ExtResource("4_bg4f7")
+autoplay = true

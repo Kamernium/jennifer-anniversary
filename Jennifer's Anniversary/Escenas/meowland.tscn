@@ -193,19 +193,19 @@ autoplay = true
 parameters/looping = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = -865.0
-offset_top = 360.0
-offset_right = -688.0
-offset_bottom = 430.0
+offset_left = -816.0
+offset_top = 387.0
+offset_right = -639.0
+offset_bottom = 457.0
 text = "Meowland"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
-offset_left = -859.0
-offset_top = 419.0
-offset_right = -677.0
-offset_bottom = 442.0
+offset_left = -813.0
+offset_top = 451.0
+offset_right = -631.0
+offset_bottom = 474.0
 theme_override_font_sizes/font_size = 11
 text = "El mundo de los gatos parlantes :3"
 horizontal_alignment = 1

@@ -8,8 +8,8 @@
 script = ExtResource("1_816ua")
 
 [node name="JustMonika" type="Sprite2D" parent="."]
-position = Vector2(577.5, 326)
-scale = Vector2(1.151, 1.15098)
+position = Vector2(576, 324)
+scale = Vector2(1.152, 1.15098)
 texture = ExtResource("2_f2vtg")
 
 [node name="JustMonika2" type="AudioStreamPlayer2D" parent="."]
