@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://2twv0textxhp"
+path="res://.godot/imported/silly song.mp3-53cef63614d028a5234dcaf621af17cd.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/silly song.mp3"
+dest_files=["res://.godot/imported/silly song.mp3-53cef63614d028a5234dcaf621af17cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

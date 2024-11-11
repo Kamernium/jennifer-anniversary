@@ -27,6 +27,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Applejack": "res://Dialogic timelines/Applejack.dtl",
+"Bienvenida": "res://Dialogic timelines/Bienvenida.dtl",
 "CharacterTest": "res://Dialogic timelines/CharacterTest.dtl",
 "Fluttershy": "res://Dialogic timelines/Fluttershy.dtl",
 "Gato 4": "res://Dialogic timelines/Gato 4.dtl",

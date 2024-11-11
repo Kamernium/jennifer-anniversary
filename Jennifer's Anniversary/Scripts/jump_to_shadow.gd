@@ -12,5 +12,8 @@ func Monika():
 func MonikaEnd():
 	get_tree().change_scene_to_file("res://Escenas/finale.tscn")
 
+func StartGame():
+	get_tree().change_scene_to_file("res://Escenas/meowland.tscn")
+
 func _ready() -> void:
 	pass # Replace with function body.

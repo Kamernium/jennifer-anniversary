@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhpq48xyuf71x"]
+
+[ext_resource type="Script" path="res://Escenas/bienvenida.gd" id="1_32qfu"]
+[ext_resource type="Texture2D" uid="uid://cf70ex8ya100q" path="res://Sprites/negro.png" id="1_tv2mc"]
+[ext_resource type="AudioStream" uid="uid://2twv0textxhp" path="res://Sonidos/silly song.mp3" id="3_1k1o6"]
+
+[node name="Bienvenida" type="Node2D"]
+script = ExtResource("1_32qfu")
+
+[node name="Negro" type="Sprite2D" parent="."]
+position = Vector2(599, 315)
+texture = ExtResource("1_tv2mc")
+
+[node name="SillySong" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(242, 171)
+stream = ExtResource("3_1k1o6")
+autoplay = true
+parameters/looping = true
