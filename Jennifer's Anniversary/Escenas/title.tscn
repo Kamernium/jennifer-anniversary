@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://og4s2e423hrf"]
 
 [ext_resource type="Script" path="res://Scripts/title.gd" id="1_7vs0p"]
-[ext_resource type="Texture2D" uid="uid://b0ati1ajuxwuu" path="res://Sprites/gatitos.jpg" id="1_qhgpr"]
+[ext_resource type="Texture2D" uid="uid://c8xlqo4h2akbj" path="res://Sprites/gatitos sobre fondo negro.png" id="2_1vggv"]
 [ext_resource type="FontFile" uid="uid://blc2yn3iljfxs" path="res://Sprites/Super Squad Italic.ttf" id="2_sa182"]
 [ext_resource type="AudioStream" uid="uid://bmkyqqs6of30n" path="res://Sonidos/Turi ip.mp3" id="3_826ql"]
 
@@ -16,8 +16,8 @@ script = ExtResource("1_7vs0p")
 
 [node name="Gatitos" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
-scale = Vector2(0.822857, 0.653226)
-texture = ExtResource("1_qhgpr")
+scale = Vector2(0.96, 0.962853)
+texture = ExtResource("2_1vggv")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

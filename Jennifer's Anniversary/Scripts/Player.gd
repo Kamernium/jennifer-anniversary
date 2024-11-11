@@ -24,8 +24,6 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		if Input.is_action_just_released("Saltar"):
-			velocity.y += 15000 * delta
 		if Input.is_action_pressed("ui_down"):
 			velocity.y += 25000 * delta 
 			
@@ -34,8 +32,7 @@ func _physics_process(delta):
 
 
 
-	if Input.is_action_just_pressed("Saltar") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+
 	var movement = Input.get_axis("ui_left","ui_right")
 	
 	if movement:
