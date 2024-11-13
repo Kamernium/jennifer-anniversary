@@ -11,8 +11,11 @@ config_version=5
 [application]
 
 config/name="Jennifer's Anniversary"
+config/description="Kyori la furra se embarca en la aventura mas fumada de su vida"
+config/version="1.0.0.0"
+run/main_scene="res://Escenas/title.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://gatito_7PX_icon.ico"
 
 [autoload]
 

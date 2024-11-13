@@ -10,11 +10,11 @@ func _ready() -> void:
 	applejack_obj.dialogue_name = "Applejack"
 
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	applejack_obj.interact = true
 	
 
 
 
-func _on_area_exited(area: Area2D) -> void:
+func _on_area_exited(_area: Area2D) -> void:
 	applejack_obj.interact = false

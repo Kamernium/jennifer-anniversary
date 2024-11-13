@@ -51,12 +51,22 @@ shape = SubResource("RectangleShape2D_y4o2g")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 442.0
-offset_top = 352.0
-offset_right = 787.0
-offset_bottom = 493.0
+offset_left = 446.0
+offset_top = 383.0
+offset_right = 791.0
+offset_bottom = 436.0
 theme_override_font_sizes/font_size = 20
 text = "¡¡Feliz cumpleaños Jennifer!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 531.0
+offset_top = 428.0
+offset_right = 715.0
+offset_bottom = 455.0
+theme_override_font_sizes/font_size = 10
+text = "(Ya puedes cerrar el juego xD)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
